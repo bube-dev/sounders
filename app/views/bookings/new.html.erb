@@ -1,0 +1,22 @@
+<%= form_with(model: @booking, data: {turbo: false}) do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+
+    <%= f.label :"Phone Number" %>
+    <%= f.telephone_field :phone_no, class: 'form-control' %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control' %>
+
+    <%= f.label :"Check In" %>
+    <%= f.date_field :check_in, class: 'form-control' %>
+
+    <%= f.label :"Check Out" %>
+    <%= f.date_field :check_out, class: 'form-control' %>
+
+    <%= f.label :"Units" %>
+    <%= f.number_field :units, class: 'form-control' %>
+
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+
+<% end %>
