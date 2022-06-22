@@ -1,22 +1,22 @@
 ROOMS = [
   {
-    type: "",
-    total: "",
-    available: "",
-    price:
+    room_type: "Single",
+    total: 5,
+    available: 5,
+    price: 30000
   },
   {
-    type: "",
-    total: "",
-    available: "",
-    price:
+    room_type: "Double",
+    total: 5,
+    available: 5,
+    price: 40000
   },
   {
-    type: "",
-    total: "",
-    available: "",
-    price:
-  },
+    room_type: "Master",
+    total: 3,
+    available: 3,
+    price: 50000
+  }
 
 ]
 ROOMS.each do |record|

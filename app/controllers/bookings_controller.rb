@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
                 format.html { redirect_to action: 'booked' }
                 format.json { render :show, status: :created, location: @booking }
             else
-                format.html { render :booked }
+                format.html { redirect_to action: 'booked' }
                 format.json { render json: @booking.errors, status: :unprocessable_entity }
             end
         end
