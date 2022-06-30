@@ -14,8 +14,16 @@
     <%= f.label :"Check Out" %>
     <%= f.date_field :check_out, class: 'form-control' %>
 
-    <%= f.label :"Units" %>
-    <%= f.number_field :units, class: 'form-control' %>
+    <%= f.radio_button :room_id, 1 %>
+    <%= f.label :room_type, "Single" %>
+
+    <%= f.radio_button :room_id, 2 %>
+    <%= f.label :room_type, "Double" %>
+
+    <%= f.radio_button :room_id, 3 %>
+    <%= f.label :room_type, "Master" %>
+
+
 
     <%= f.submit "Submit", class: "btn btn-primary" %>
 

@@ -10,20 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_21_151108) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_23_221936) do
   create_table "bookings", force: :cascade do |t|
     t.string "name"
     t.string "phone_no"
     t.string "email"
     t.date "check_in"
     t.date "check_out"
-    t.string "room_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "room_id"
+    t.index ["room_id"], name: "index_bookings_on_room_id"
   end
 
   create_table "rooms", force: :cascade do |t|
-    t.string "room_type"
+    t.string "name"
     t.integer "total"
     t.integer "available"
     t.float "price"
@@ -31,5 +32,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_151108) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "bookings", "rooms", column: "room_type"
+  add_foreign_key "bookings", "rooms"
 end

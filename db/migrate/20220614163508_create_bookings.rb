@@ -6,7 +6,6 @@ class CreateBookings < ActiveRecord::Migration[7.0]
       t.string :email
       t.date :check_in
       t.date :check_out
-      t.string :room_type
 
       t.timestamps
     end
